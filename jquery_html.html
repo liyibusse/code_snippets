@@ -1,0 +1,46 @@
+CTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+
+<!-- 
+jQuery provides a way to encode and decode html entities.
+
+If you use a "<div/>" tag, it will strip out all the html.
+
+function htmlDecode(value) {
+    return $("<div/>").html(value).text();
+}
+
+function htmlEncode(value) {
+    return $('<div/>').text(value).html();
+}
+
+If you use a "<textarea/>" tag, it will preserve the html tags.
+
+function htmlDecode(value) {
+    return $("<textarea/>").html(value).text();
+}
+
+function htmlEncode(value) {
+    return $('<textarea/>').text(value).html();
+}
+
+ -->
+<script type="text/javascript">
+$(function(){
+	var response = "abc| &lt;br&gt;def | &lt;br&gt;";
+	response = $('<textarea />').html(response).text();
+	alert (response);
+});
+</script>
+
+
+
+</body>
+</html>
+
